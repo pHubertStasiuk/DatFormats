@@ -1,4 +1,4 @@
-package xml.model.dom;
+package model.xml.dom;
 
 import lombok.Builder;
 import lombok.Data;

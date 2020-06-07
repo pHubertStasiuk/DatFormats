@@ -1,4 +1,4 @@
-package xml.model.jaxb;
+package model.xml.jaxb;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.math.BigDecimal;

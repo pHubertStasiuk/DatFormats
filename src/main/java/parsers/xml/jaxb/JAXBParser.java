@@ -1,10 +1,11 @@
-package xml.parsers.jaxb;
+package parsers.xml.jaxb;
 
-import xml.model.jaxb.Catalog;
-import xml.parsers.Parser;
+
+import parsers.Parser;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.catalog.Catalog;
 import java.io.File;
 
 public class JAXBParser implements Parser<Catalog> {
@@ -13,8 +14,7 @@ public class JAXBParser implements Parser<Catalog> {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Catalog.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            Catalog catalog = (Catalog) jaxbUnmarshaller.unmarshal(file);
-            return catalog;
+            return (Catalog) jaxbUnmarshaller.unmarshal(file);
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }

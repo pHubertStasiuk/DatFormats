@@ -1,11 +1,12 @@
-package xml.parsers.dom;
+package parsers.xml.dom;
 
+import model.xml.dom.CD;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import xml.model.dom.CD;
-import xml.parsers.Parser;
+
+import parsers.Parser;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,7 +22,7 @@ public class DOMParser implements Parser<List<CD>> {
             Document document = getDocument(file);
             String rootElement = getRootElement(document);
             System.out.println("Root element: " + rootElement);
-            NodeList nodeList = document.getElementsByTagName("CD");
+            NodeList nodeList = document.getElementsByTagName("model.xml.jaxb.CD");
             return getElements(nodeList);
         } catch (Exception exception) {
             throw new RuntimeException("Could not parse XML file!");

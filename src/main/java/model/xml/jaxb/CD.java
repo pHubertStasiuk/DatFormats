@@ -1,4 +1,4 @@
-package xml.model.jaxb;
+package model.xml.jaxb;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 @Data
 @XmlType(propOrder = {"title", "artist", "country", "company", "price", "year"})
-@XmlRootElement(name = "CD")
+@XmlRootElement(name = "model.xml.jaxb.CD")
 @NoArgsConstructor
 public class CD {
 

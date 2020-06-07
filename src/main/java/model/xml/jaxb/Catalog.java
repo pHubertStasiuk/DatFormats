@@ -1,5 +1,4 @@
-package xml.model.jaxb;
-
+package model.xml.jaxb;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +16,7 @@ public class Catalog {
 
     private List<CD> cdList = new ArrayList<>();
 
-    @XmlElement(name = "CD")
+    @XmlElement(name = "model.xml.jaxb.CD")
     public void setCdList(List<CD> cdList) {
         this.cdList = cdList;
     }
